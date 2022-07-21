@@ -231,6 +231,7 @@ img {
 } */
 
 .hero {
+    max-width: 1600px;
     background-color: var(--bg-color-hero);
     text-align: center;
 
@@ -238,9 +239,11 @@ img {
         to right,
         rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -332,18 +335,16 @@ background-color: var(--hero-button-hover-color);
 
 .icon-features-container {
     display: flex;
-    width: 270px;
     height: 120px;
     background-color: var(--bg-color-second);
 
-    padding: 25px 0;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
 .icon-fetures {
-    align-self: center;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
 .features-subtitle {
@@ -364,7 +365,11 @@ background-color: var(--hero-button-hover-color);
     color: var(--second-text-color);
 }
 
-/* Чем мы занимаемся */
+
+
+/* =========== Чем мы занимаемся ==========*/
+
+
 
 .worksheet-title {
     font-size: 36px;
@@ -391,7 +396,7 @@ background-color: var(--hero-button-hover-color);
     padding-top: 0;
 }
 
-/* Наша команда */
+/* ========= Наша команда ========= */
 
 .team {
     background-color: var(--bg-color-second);
@@ -421,7 +426,7 @@ background-color: var(--hero-button-hover-color);
 }
 
 .team-list-item {
-    background-color: var(--bg-color-second);
+    background-color: var(--bg-color-third);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -436,9 +441,7 @@ background-color: var(--hero-button-hover-color);
 
 .team-title-text-container {
     padding-top: 30px;
-    padding-bottom: 0;
-    margin-bottom: 16px;
-    
+    padding-bottom: 28px;
 }
 
 .team-names-title {
@@ -460,16 +463,13 @@ background-color: var(--hero-button-hover-color);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
     margin-top: 0;
+    margin-bottom: 16px;
 }
 
 .team-social-list {
+    gap: 10px;
     display: flex;
-    justify-content: space-between;
-
-    padding-left: 32px;
-    padding-right: 32px;
-    margin-bottom: 28px;
-
+    justify-content: center;
 }
 
 .social-link {
@@ -628,11 +628,10 @@ background-color: var(--hero-button-hover-color);
 
 .footer-flex {
     display: flex;
-    
+    align-items: baseline;
 }
 
 .footer-join {
-    margin-top: 12px;
     margin-left: 70px;
 
 }
@@ -770,10 +769,7 @@ width: 130px;
 .portfolio-cards-item {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
-    margin-bottom: 30px;
-    /* border-left: 1px solid #eeeeee;
-    border-right: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee; */
+    margin-bottom: 30px;    
 }
 
 .portfolio-cards-item:nth-child(3n) {
@@ -783,14 +779,22 @@ width: 130px;
 .portfolio-cards-item:nth-last-child(-n+3) {
     margin-bottom: 0;
 }
-
-.portfolio-cards-item:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+ 
+.portfolio-card {
+    display: inline-block;
+    text-decoration: none;
 }
 
-.portfolio-card {
-    text-decoration: none;
-    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+.portfolio-card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-card:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-title {
